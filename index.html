@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo-app</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .sss {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .qw {
+            font-family: American Typewriter, serif;
+            font-style: italic;
+            margin-top: 35px;
+            height: 100px;
+            font-size: 45px;
+            color: white;
+        }
+
+        .za {
+            border-radius: 100px;
+
+        }
+
+        h1 {
+            color: white;
+        }
+
+        .a {
+            text-align: center;
+        }
+
+        .xyz {
+            color: white;
+            text-decoration: underline;
+            font-size: 20px;
+        }
+
+        #ip {
+            border: 02px solid white;
+            border-radius: 100px;
+            width: 290px;
+            height: 40px;
+            font-size: 30px;
+
+
+        }
+
+        .d {
+            background-color: aqua;
+            border-radius: 100px;
+            font-weight: bold;
+            box-shadow: 3px 3px 2px 0.5px gray;
+            height: 50px;
+            font-size: 18px;
+        }
+
+        .dd {
+            background-color: aqua;
+            border-radius: 100px;
+            font-weight: bold;
+            box-shadow: 3px 3px 2px 0.5px gray;
+            margin-left: 07px;
+            height: 50px;
+            font-size: 18px;
+        }
+
+        .dd:active {
+            border: 02px solid yellow;
+        }
+
+        .d:active {
+            border: 02px solid yellow;
+        }
+
+        #ull {
+
+            list-style: decimal;
+
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        #pp {
+            display: flex;
+            justify-content: center;
+        }
+
+        .as {
+            background-color: red;
+            border: 02px solid white;
+            border-radius: 100px;
+            padding: 03px;
+            font-weight: bold;
+            margin-top: 05px;
+            margin-left: 05px;
+            font-size: 18px;
+            height: 35px;
+            width: 90px;
+
+        }
+
+        .as:active {
+            border: 02px solid yellow;
+        }
+
+        .www {
+            display: flex;
+            justify-content: center;
+            margin: 12px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sss">
+        <div> <img class="za" src="mz.jpeg" height="85px"></div>
+        <div class="qw">TODO APP</div>
+    </div>
+
+
+    <div class="a">
+        <input id="ip" type="text" placeholder="Type your TODO ">
+
+
+    </div>
+    <div class="www">
+        <button class="d" onclick="add()">ADD TODO</button>
+        <button class="dd" onclick="zain()">DELETE ALL</button>
+    </div>
+
+    <div id="pp">
+        <ul id="ull">
+
+        </ul>
+    </div>
+
+
+
+
+
+
+    <script>
+
+        function add() {
+            var a = document.getElementById('ip')
+            var b = document.createElement('li')
+            var c = document.createTextNode(a.value)
+            b.appendChild(c)
+            b.setAttribute('class', 'xyz')
+            var d = document.getElementById('ull')
+            d.appendChild(b)
+            a.value = ''
+            // delete button
+            var e = document.createElement("button")
+            var f = document.createTextNode("DELETE")
+            e.appendChild(f)
+            b.appendChild(e)
+            e.setAttribute('onclick', 'ss(this)')
+            e.setAttribute('class', 'as')
+            // edit button
+            var g = document.createElement("button")
+            var h = document.createTextNode("EDIT")
+            g.appendChild(h)
+            g.setAttribute('onclick', 'qq(this)')
+            g.setAttribute('class', 'as')
+            b.appendChild(g)
+
+
+        }
+
+        function ss(h) {
+
+            h.parentNode.remove()
+
+        }
+
+
+
+
+        function qq(a) {
+            var zz = a.parentNode.firstChild.nodeValue
+            var ddd = prompt('ENTER YOUR EDIT TODO', zz)
+            a.parentNode.firstChild.nodeValue = ddd
+        }
+
+        function zain() {
+            ull.innerHTML = ''
+        }
+
+    </script>
+</body>
+
+</html>
